@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* =========================
+   LIGHT MODE (default)
+   ========================= */
+@theme {
+  --color-bgColor: #ffffff;
+  --color-samiDarkBlue: #161d2fc9;
+  --color-white: #161d2f;
+  --color-white-50: rgba(255, 255, 255, 0.5);
+  --color-textColor: #111111;
+  --color-border: #9ba6c2;
+  --color-red: #fc4747;
+}
+
+/* =========================
+   DARK MODE
+   ========================= */
+@layer base {
+  .dark {
+    --color-bgColor: #10141e;
+    --color-samiDarkBlue: #161d2f;
+    --color-white: #fff;
+    --color-white-50: rgba(255, 255, 255, 0.5);
+    --color-textColor: #ffffff;
+    --color-border: #5A698F;
+    --color-red: #fc4747;
+  }
+}
+
+/* =========================
+   OPTIONAL: global styles
+   ========================= */
+@layer base {
+  body {
+    background-color: var(--color-bgColor);
+    color: var(--color-textColor);
+    font-size: 15px;
+    font-weight: 400;
+  }
+  button{
+    cursor: pointer;
+  }
+}
