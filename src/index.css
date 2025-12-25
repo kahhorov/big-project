@@ -1,44 +1,77 @@
 @import "tailwindcss";
-
 /* =========================
    LIGHT MODE (default)
    ========================= */
 @theme {
   --color-bgColor: #ffffff;
-  --color-samiDarkBlue: #161d2fc9;
-  --color-white: #161d2f;
-  --color-white-50: rgba(255, 255, 255, 0.5);
+  --color-samiDarkBlue: #eaeaeac9;
+  --color-white: #fff;
+  --color-white-50: rgba(255, 255, 255, 0.562);
   --color-textColor: #111111;
   --color-border: #9ba6c2;
-  --color-red: #fc4747;
+  --color-red: #f53333;
+  --shadow-card-shadow: 1px 1px 20px 1px #10141e;
+  --color-left-bar: #fff;
+  --color-left-menu: #fff;
 }
 
-/* =========================
-   DARK MODE
-   ========================= */
 @layer base {
+  /* =========================
+  DARK MODE
+  ========================= */
   .dark {
     --color-bgColor: #10141e;
     --color-samiDarkBlue: #161d2f;
     --color-white: #fff;
     --color-white-50: rgba(255, 255, 255, 0.5);
     --color-textColor: #ffffff;
-    --color-border: #5A698F;
+    --color-border: #5a698f;
     --color-red: #fc4747;
+    --color-left-bar: #17212b;
+    --color-left-menu: #17212b;
   }
-}
-
-/* =========================
-   OPTIONAL: global styles
-   ========================= */
-@layer base {
+  /* =========================
+  OPTIONAL: global styles
+  ========================= */
   body {
     background-color: var(--color-bgColor);
     color: var(--color-textColor);
     font-size: 15px;
     font-weight: 400;
+    height: 100vh;
   }
-  button{
+  #root {
+    height: 100vh;
+  }
+  button {
     cursor: pointer;
+  }
+}
+@layer utilities {
+  /* Scrollbar asosi (Track) */
+  .scrollbar-telegram::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-telegram::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Thumb - Odatiy holatda shaffof */
+  .scrollbar-telegram::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Hover bo'lganda yoki scrollbar ustiga borganda ko'rinishi */
+  .scrollbar-telegram:hover::-webkit-scrollbar-thumb,
+  .scrollbar-telegram::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Ustiga sichqoncha borganda yanada yorqinroq (Telegram kabi) */
+  .scrollbar-telegram::-webkit-scrollbar-thumb:active {
+    background-color: rgba(255, 255, 255, 0.4);
   }
 }
