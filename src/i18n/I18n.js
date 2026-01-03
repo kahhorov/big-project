@@ -33,6 +33,8 @@ const resources = {
       Language: "Language",
       Version: "Version",
       "Sign in with Google": "Sign in with Google",
+      "A confirmation link has been sent to your email!":
+        "A confirmation link has been sent to your email!",
     },
   },
   uz: {
@@ -66,6 +68,8 @@ const resources = {
       Language: "Til",
       Version: "Tizim versiyasi",
       "Sign in with Google": "Google bilan kirish",
+      "A confirmation link has been sent to your email!":
+        "Elektron pochtangizga tasdiqlash havolasi yuborildi!",
     },
   },
 };

@@ -70,7 +70,7 @@ function SignUp() {
         e.target.reset();
         setPasswordText("");
         setRepeatPasswordText("");
-        toasfy.warning("Email pochtaga tasdiqlash linki yuborildi!");
+        toasfy.warning(t("A confirmation link has been sent to your email!"));
       } catch (error) {
         toast.error(t("Account was not created"));
       }
@@ -155,7 +155,7 @@ function SignUp() {
             required
             value={passwordText}
             onChange={handleChange}
-            className="outline-0 border-border border-b pb-4 w-full"
+            className="border-border border-b outline-0 pb-4 w-full"
           />
           {passwordError && (
             <span className="absolute right-0 text-red max-sm:text-[.625rem] max-sm:bottom-0">
@@ -204,7 +204,7 @@ function SignUp() {
           )}
         </label>
         <Button text={t("Create an account")} />
-          <GoogleWithLogin />
+        <GoogleWithLogin />
         <div className="flex items-center gap-2">
           <p>{t("Already have an account?")}</p>
           <Link
